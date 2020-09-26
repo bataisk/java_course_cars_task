@@ -7,6 +7,7 @@ public class Car {
     private long id;
     private String company;
     private String model;
+    private int yearOfCreation;
     private String color;
     private int price;
     private String registerNumber;
@@ -26,6 +27,15 @@ public class Car {
     }
 
     // Public
+
+
+    public int getYearOfCreation() {
+        return yearOfCreation;
+    }
+
+    public void setYearOfCreation(int yearOfCreation) {
+        this.yearOfCreation = yearOfCreation;
+    }
 
     public long getId() {
         return id;
