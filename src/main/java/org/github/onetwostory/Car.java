@@ -27,13 +27,14 @@ public class Car {
     public Car() {
     }
 
-    public Car(long id, String company, String model, String color, int price, String registerNumber) {
+    public Car(long id, String company, String model, String color, int price, String registerNumber, int yearOfCreation) {
         this.id = id;
         this.company = company;
         this.model = model;
         this.color = color;
         this.price = price;
         this.registerNumber = registerNumber;
+        this.yearOfCreation = yearOfCreation;
     }
 
     // Public
