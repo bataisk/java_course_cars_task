@@ -7,28 +7,31 @@ import java.util.stream.Collectors;
 
 public class CarChoose {
 
+    // Variables
+
     private final List<Car> cars;
+
+    // Constructors
 
     public CarChoose(List<Car> cars) {
         this.cars = cars;
     }
 
+    // Public
+
     public List<Car> chooseByCompany(String company) {
-        final List<Car> byCompany = cars
+        return cars
                 .stream()
                 .filter(car -> belongsToCompany(car, company))
                 .collect(Collectors.toList());
-
-        return byCompany;
     }
 
     public List<Car> chooseByModelAndExpluatation(String model, int yearsOfExpluatation) {
-        final List<Car> byModelAndYear = cars
+        return cars
                 .stream()
                 .filter(car -> isModel(car, model))
                 .filter(car -> checkForAge(car, yearsOfExpluatation))
                 .collect(Collectors.toList());
-        return byModelAndYear;
     }
 
     public List<Car> chooseByYearAndPrice(int year, int price) {
@@ -59,8 +62,8 @@ public class CarChoose {
     private boolean isModel(Car car, String model) {
         return car
                 .getModel()
-                .toUpperCase()
                 .trim()
+                .toUpperCase()
                 .equals(model
                         .trim()
                         .toUpperCase());
@@ -74,6 +77,7 @@ public class CarChoose {
                 .equals(company
                         .trim()
                         .toUpperCase());
+
     }
 
 }

@@ -1,5 +1,14 @@
 package org.github.onetwostory;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Car {
 
     // Variables
@@ -12,7 +21,11 @@ public class Car {
     private int price;
     private String registerNumber;
 
-    // Constructor
+    /*
+    // Constructors
+
+    public Car() {
+    }
 
     public Car(long id, String company, String model, String color, int price, String registerNumber) {
         this.id = id;
@@ -21,9 +34,6 @@ public class Car {
         this.color = color;
         this.price = price;
         this.registerNumber = registerNumber;
-    }
-
-    public Car() {
     }
 
     // Public
@@ -85,6 +95,6 @@ public class Car {
         this.registerNumber = registerNumber;
     }
 
-
+*/
 
 }
