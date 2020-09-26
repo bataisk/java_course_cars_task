@@ -5,6 +5,10 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/**
+ * Repository of cars
+ */
 public class CarChoose {
 
     // Variables
@@ -50,8 +54,7 @@ public class CarChoose {
     }
 
     private boolean checkforEqualsAge(Car car, int year) {
-        final int yearNow = new GregorianCalendar().get(Calendar.YEAR);
-        return car.getYearOfCreation() == yearNow;
+        return car.getYearOfCreation() == year;
     }
 
     private boolean checkForAge(Car car, int yearsOfExpluatation) {

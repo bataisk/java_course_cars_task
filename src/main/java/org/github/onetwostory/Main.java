@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println(cars.chooseByCompany("Deo"));
         System.out.println(cars.chooseByModelAndExpluatation("ML-240", 3));
-        System.out.println(cars.chooseByYearAndPrice(2000, 20000));
+        System.out.println(cars.chooseByYearAndPrice(2000, 120));
 
     }
 }
