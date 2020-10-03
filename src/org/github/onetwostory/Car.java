@@ -14,14 +14,14 @@ public class Car {
 
     // Constructor
 
-    public Car(long id, String company, String model, String color, int price, String registerNumber, int yearOfCreation) {
+    public Car(long id, String company, String model, int yearOfCreation, String color, int price, String registerNumber) {
         this.id = id;
         this.company = company;
         this.model = model;
+        this.yearOfCreation = yearOfCreation;
         this.color = color;
         this.price = price;
         this.registerNumber = registerNumber;
-        this.yearOfCreation = yearOfCreation;
     }
 
     public Car() {
@@ -86,6 +86,9 @@ public class Car {
         this.registerNumber = registerNumber;
     }
 
-
+    public String toString() {
+        return String.format("(%d %s %s %d %s $%d %s)",
+                id, company, model, yearOfCreation, color, price, registerNumber);
+    }
 
 }

@@ -34,7 +34,7 @@ public class CarChoose {
     public List<Car> chooseByYearAndPrice(int year, int price) {
         final List<Car> byYearAndPrice = cars
                 .stream()
-                .filter(car -> checkforEqualsAge(car, year))
+                .filter(car -> checkForEqualsAge(car, year))
                 .filter(car -> checkForBiggerPrice(car, price))
                 .collect(Collectors.toList());
         return byYearAndPrice;
@@ -43,12 +43,12 @@ public class CarChoose {
     // Private
 
     private boolean checkForBiggerPrice(Car car, int price) {
-        return car.getPrice() > price;
+        return car.getPrice() < price;
     }
 
-    private boolean checkforEqualsAge(Car car, int year) {
-        final int yearNow = new GregorianCalendar().get(Calendar.YEAR);
-        return car.getYearOfCreation() == yearNow;
+    private boolean checkForEqualsAge(Car car, int year) {
+//        final int yearNow = new GregorianCalendar().get(Calendar.YEAR);
+        return car.getYearOfCreation() == year;
     }
 
     private boolean checkForAge(Car car, int yearsOfExpluatation) {
